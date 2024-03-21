@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyTitle>Tekton.EComerce.Application</AssemblyTitle>
+    <Product>Tekton.EComerce.Application</Product>
+    <Copyright>Copyright ©  2024</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="OP.FK-Framework.Dto" Version="0.0.1.520" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.4.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tekton.ECommerce.Domain.Entity\Tekton.ECommerce.Domain.Entity.csproj" />
+    <ProjectReference Include="..\Tekton.ECommerce.Domain.ICommand\Tekton.ECommerce.Domain.ICommand.csproj" />
+    <ProjectReference Include="..\Tekton.ECommerce.Domain.IQuery\Tekton.ECommerce.Domain.IQuery.csproj" />
+    <ProjectReference Include="..\Tekton.ECommerce.IApplication\Tekton.ECommerce.IApplication.csproj" />
+  </ItemGroup>
+</Project>

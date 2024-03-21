@@ -1,0 +1,52 @@
+USE [db_tekton_ecommerce]
+GO
+
+PRINT (N'Create table bst_core.PRODUCT')
+GO
+
+IF OBJECT_ID('bst_core.PRODUCT', 'U') IS NULL
+	CREATE TABLE [bst_core].[PRODUCT](
+		[OWNER_ID] int NOT NULL,
+		[COMPANY_ID] int NOT NULL,
+		[PRODUCT_ID] [int] NOT NULL,
+
+		[CODE] [varchar](10) NULL,
+		[EXTERNAL_CODE] [varchar](50) NULL,
+		[PRODUCT_NAME] [varchar](100) NULL,
+		[PRODUCT_DESCRIPTION] [varchar](500) NULL,
+		
+		[ORDERING] [varchar](10) NULL,
+		
+		[BARCODE] [varchar](50) NULL,
+
+		[BRAND_ID] [int]  NULL,
+		[CATEGORY_ID] [int] NULL,
+		[SUBCATEGORY_ID] [int] NULL,
+
+		[STOCK] [INT] NULL,
+		[PRICE] [decimal](11, 2) NULL,
+
+		[COLOR] VARCHAR(50),
+		[ICON] VARCHAR(100),
+		[DATA1] VARCHAR(100),
+		[DATA2] VARCHAR(100),
+		[ADDITIONAL] VARCHAR(100),
+		[OBSERVATION] VARCHAR(100),
+
+		[STATUS] SMALLINT,
+
+		[IS_ACTIVE] [bit] NULL,		
+		[HOST] [varchar](50) NULL,
+		[CREATION_USER_ID] [int] NULL,
+		[CREATION_DATE] [datetime] NULL,
+		[UPDATE_USER_ID] [int] NULL,
+		[UPDATE_DATE] [datetime] NULL,
+	 CONSTRAINT [PK_PRODUCT] PRIMARY KEY CLUSTERED 
+	(
+		[OWNER_ID] ASC,		
+		[COMPANY_ID] ASC,		
+		[PRODUCT_ID] ASC
+	)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+	) ON [PRIMARY]
+
+GO

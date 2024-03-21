@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyTitle>Tekton.EComerce.Persistence.SQLServer</AssemblyTitle>
+    <Product>Tekton.EComerce.Persistence.SQLServer</Product>
+    <Copyright>Copyright ©  2024</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="OP.FK-Framework.Application" Version="0.0.0.720" />
+    <PackageReference Include="OP.FK-Framework.SQLServer" Version="0.0.0.5" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tekton.ECommerce.Domain.Entity\Tekton.ECommerce.Domain.Entity.csproj" />
+    <ProjectReference Include="..\Tekton.ECommerce.Domain.ICommand\Tekton.ECommerce.Domain.ICommand.csproj" />
+    <ProjectReference Include="..\Tekton.ECommerce.Domain.IQuery\Tekton.ECommerce.Domain.IQuery.csproj" />
+  </ItemGroup>
+</Project>
