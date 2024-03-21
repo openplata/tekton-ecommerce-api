@@ -8,7 +8,7 @@ La arquitectura implementada sigue el enfoque de Microservicios, que es un estil
 
 El patrón utilizado en esta arquitectura es el CQRS (Command Query Responsibility Segregation), que propone separar las operaciones de lectura (consultas) de las operaciones de escritura (comandos) en modelos de dominio distintos. Esto se refleja en la estructura de la aplicación de la siguiente manera:
 
-### Api (Tekton.ECommerce.Api): 
+## Tekton.ECommerce.Api: 
 Este es el punto de entrada de la aplicación donde se exponen los endpoints para interactuar con los servicios. Aquí se reciben las solicitudes del cliente y se gestionan las respuestas.
 
 ### CrossCutting:
